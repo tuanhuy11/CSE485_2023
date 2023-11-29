@@ -10,7 +10,7 @@ CREATE TABLE `theloai` (
   `ten_tloai` varchar(50) NOT NULL
 )
 CREATE TABLE `baiviet` (
-  `ma_baviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
+  `ma_bviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
   `tieude` varchar(200) NOT NULL,
   `ten_bhat` varchar(100) NOT NULL,
   `ma_tloai` int(10) UNSIGNED NOT NULL,
