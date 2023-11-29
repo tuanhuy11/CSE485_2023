@@ -12,6 +12,7 @@ CREATE TABLE `theloai` (
   `ma_tloai` int(10) UNSIGNED NOT NULL PRIMARY KEY,
   `ten_tloai` varchar(50) NOT NULL
 )
+
 CREATE TABLE `baiviet` (
   `ma_bviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
   `tieude` varchar(200) NOT NULL,
@@ -25,6 +26,15 @@ CREATE TABLE `baiviet` (
   FOREIGN KEY (`ma_tloai`) REFERENCES `theloai` (`ma_tloai`),
   FOREIGN KEY (`ma_tgia`) REFERENCES `tacgia` (`ma_tgia`)
 )
+
+CREATE TABLE nguoidung (
+  ma_nd INT NOT NULL PRIMARY KEY,
+  tai_khoan VARCHAR(255) NOT NULL UNIQUE,
+  mat_khau VARCHAR(255) NOT NULL,
+  quyen_han BIT DEFAULT 0
+);
+ALTER TABLE nguoidung MODIFY ma_nd INT AUTO_INCREMENT;
+ALTER TABLE nguoidung AUTO_INCREMENT = 1;
 
 
 -- tac gia
@@ -169,3 +179,11 @@ VALUES (
 "Ánh nắng cuối ngày rồi cũng sẽ tắt, dòng sông con đò rồi cũng sẽ rẽ sang một hướng khác. Nhưng việc trồng người luôn cảm thụ với chuyến đò ngang, cứ tần tảo đưa rồi lặng lẽ quay về đưa sang. Con đò năm xưa của Thầy nặng trĩu yêu thương, hy sinh thầm lặng.",
 8, "2014/1/2"
 );
+
+
+-- Người dùng
+
+
+Insert INTO nguoidung (tai_khoan, mat_khau, quyen_han)
+Values ('admin', 'admin', 1),
+       ('phivanduc', 'phivanduc', 0);
