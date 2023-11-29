@@ -13,7 +13,7 @@ CREATE TABLE `theloai` (
   `ten_tloai` varchar(50) NOT NULL
 )
 CREATE TABLE `baiviet` (
-  `ma_baviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
+  `ma_bviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
   `tieude` varchar(200) NOT NULL,
   `ten_bhat` varchar(100) NOT NULL,
   `ma_tloai` int(10) UNSIGNED NOT NULL,
@@ -168,7 +168,7 @@ VALUES (
 "Như một cách tạ ơn đời", "Người thầy", 2,
 "Ánh nắng cuối ngày rồi cũng sẽ tắt, dòng sông con đò rồi cũng sẽ rẽ sang một hướng khác. Nhưng việc trồng người luôn cảm thụ với chuyến đò ngang, cứ tần tảo đưa rồi lặng lẽ quay về đưa sang. Con đò năm xưa của Thầy nặng trĩu yêu thương, hy sinh thầm lặng.",
 8, "2014/1/2"
-);LUE (8, "R&B");
+);
 
 
 
