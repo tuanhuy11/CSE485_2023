@@ -1,3 +1,7 @@
+<?php
+    include "../../database/connectDatabase.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +57,12 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                            <?php
+                                $query = $cnn -> prepare("Select Count(ma_nd) as dem from nguoidung");
+                                $query -> execute();
+                                $data = $query -> fetch(PDO::FETCH_ASSOC);
+                                echo "<p>".$data['dem']."</p>";
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -67,7 +76,12 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            10
+                            <?php
+                                $query = $cnn -> prepare("Select Count(ma_tloai) as dem from theloai");
+                                $query -> execute();
+                                $data = $query -> fetch(PDO::FETCH_ASSOC);
+                                echo "<p>".$data['dem']."</p>";
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -81,7 +95,12 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            20
+                            <?php
+                                $query = $cnn -> prepare("Select Count(ma_tgia) as dem from tacgia");
+                                $query -> execute();
+                                $data = $query -> fetch(PDO::FETCH_ASSOC);
+                                echo "<p>".$data['dem']."</p>";
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -95,7 +114,12 @@
                         </h5>
 
                         <h5 class="h1 text-center">
-                            110
+                            <?php
+                                $query = $cnn -> prepare("Select Count(ma_bviet) as dem from baiviet");
+                                $query -> execute();
+                                $data = $query -> fetch(PDO::FETCH_ASSOC);
+                                echo "<p>".$data['dem']."</p>";
+                            ?>
                         </h5>
                     </div>
                 </div>
