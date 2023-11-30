@@ -23,8 +23,6 @@ try{
     if(class_exists('PDO')){
         $sql='mysql:host='._HOST.';dbname='._DB;
         $cnn=new PDO($sql,_USER,_PASSWORD,$option);
-        
-        
     }
 }
 catch(PDOException $ex){
