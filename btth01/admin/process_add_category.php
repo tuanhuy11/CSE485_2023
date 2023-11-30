@@ -1,5 +1,5 @@
 <?php
-require '../../../database/connection.php';
+require '../../database/connection.php';
 if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
     $tenbaihat=$_POST['txtCatName'];
     try{

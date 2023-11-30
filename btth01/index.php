@@ -121,6 +121,42 @@
                     </div>
                 </div>
             </div>
+            <?php require '../database/connection.php';
+                 try{
+                    $sql='select * from baiviet where ma_bviet=:ma_bviet';
+                    $select=$cnn->prepare($sql);
+                    $data=[
+                        'ma_bviet'=>1
+                    ];
+                    $select->execute($data);
+                    $data1=$select->fetchAll(PDO::FETCH_ASSOC);
+                    // foreach($data1 as $value){
+                    //     $ten_tloai=$value['ten_tloai'];
+                    //     break;
+                    // }
+                    
+
+            
+                }
+                catch(PDOException $ex){
+                    echo $ex->getMessage();
+            
+                }
+            
+            ?>
+            <?php foreach($data1 as $value):?>
+                <div class="col-sm-3">
+                <div class="card mb-2" style="width: 100%;">
+                    <img src="<?= $value['hinhanh']?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-center my-title">
+                            <a href="detail.php?id=<?= $value['ma_bviet']?>" class="text-decoration-none"><?=$value['ten_bhat'] ?></a>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
+
         </div>
     </main>
     <footer class="bg-white d-flex justify-content-center align-items-center border-top border-secondary  border-2" style="height:80px">

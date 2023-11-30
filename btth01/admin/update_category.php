@@ -1,5 +1,5 @@
 <?php 
-require '../../../database/connection.php';
+require '../../database/connection.php';
 if($_SERVER['REQUEST_METHOD']=='POST' && isset($_POST['submit'])){
     $ten_tloai=$_POST['txtCatName'];
     $ma_tloai=$_POST['txtCatId'];

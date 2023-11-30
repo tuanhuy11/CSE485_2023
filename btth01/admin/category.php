@@ -57,7 +57,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php require '../../../database/connection.php' ?>
+                        <?php require '../../database/connection.php' ?>
 
                         <?php 
                         
