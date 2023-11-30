@@ -57,27 +57,34 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Nhạc trữ tình</td>
-                            <td>
-                                <a href="edit_category.php?id=1"><i class="fa-solid fa-pen-to-square"></i></a>
-                            </td>
-                            <td>
-                                <a href=""><i class="fa-solid fa-trash"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Nhạc cách mạng</td>
-                            <td>
-                                <a href="edit_category.php?id=2"><i class="fa-solid fa-pen-to-square"></i></a>
-                            </td>
-                            <td>
-                                <a href=""><i class="fa-solid fa-trash"></i></a>
-                            </td>
-                        </tr>
-                       
+                        <?php require '../../database/connection.php' ?>
+
+                        <?php 
+                        
+                            try{
+                                $sql="select * from theloai";
+                                $select=$cnn->prepare($sql);
+                                $select->execute();
+                                $data=$select->fetchAll(PDO::FETCH_ASSOC);
+
+                            }
+                            catch(PDOException $ex){
+                                $ex->getMessage();
+                            }
+                         ?>
+                         <?php foreach($data as $value): ?>
+                            <tr>
+                                <th scope="row"><?= $value['ma_tloai'] ?></th>
+                                <td><?= $value['ten_tloai'] ?></td>
+                                <td>
+                                    <a href="edit_category.php?id=<?= $value['ma_tloai'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>
+                                </td>
+                                <td>
+                                    <a href="delete_category.php?id=<?= $value['ma_tloai']?>"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            
+                         <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>

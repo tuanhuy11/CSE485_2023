@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- a. Liệt kê các bài viết về các bài hát thuộc thể loại Nhạc trữ tình (2 đ)
 SELECT * FROM baiviet WHERE ma_tloai = (SELECT ma_tloai FROM theloai WHERE ten_tloai = 'Nhạc trữ tình');
 
