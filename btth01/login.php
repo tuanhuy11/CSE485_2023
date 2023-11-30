@@ -66,13 +66,10 @@
                             <div class="row align-items-center remember">
                                 <input type="checkbox">Remember Me
                             </div>
-                           
                                 <div class="form-group">
                                     <a href="admin"  type="submit" class="btn float-end login_btn" >Login</a>
                                     
                                 </div>
-                         
-                            
                         </form>
                     </div>
                     <div class="card-footer">

@@ -54,7 +54,11 @@
                     </div>
 
                     <div class="form-group  float-end ">
+<<<<<<< HEAD
                         <a href="process_add_category.php"  class="btn btn-success">Thêm</a>
+=======
+                        <input type="submit" value="Thêm" class="btn btn-success">
+>>>>>>> feature/author
                         <a href="category.php" class="btn btn-warning ">Quay lại</a>
                     </div>
                 </form>

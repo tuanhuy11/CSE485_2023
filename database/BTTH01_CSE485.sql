@@ -3,18 +3,18 @@ CREATE DATABASE BTTH01_CSE485
 USE BTTH01_CSE485
 
 CREATE TABLE `tacgia` (
-  `ma_tgia` int(10) UNSIGNED NOT NULL PRIMARY KEY,
+  `ma_tgia` int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `ten_tgia` varchar(100) NOT NULL,
   `hinh_tgia` varchar(100) DEFAULT NULL
 ) 
 
 CREATE TABLE `theloai` (
-  `ma_tloai` int(10) UNSIGNED NOT NULL PRIMARY KEY,
+  `ma_tloai` int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `ten_tloai` varchar(50) NOT NULL
 )
 
 CREATE TABLE `baiviet` (
-  `ma_bviet` int(10) UNSIGNED NOT NULL PRIMARY KEY,
+  `ma_bviet` int UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `tieude` varchar(200) NOT NULL,
   `ten_bhat` varchar(100) NOT NULL,
   `ma_tloai` int(10) UNSIGNED NOT NULL,
