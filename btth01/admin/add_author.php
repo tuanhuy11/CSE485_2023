@@ -50,11 +50,11 @@
                 <form action="process_add_author.php" method="post">
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" id="lblCatName">Tên tác giả</span>
-                        <input type="text" class="form-control" name="txtAuthorName" >
+                        <input type="text" class="form-control" name="txtAuthorName" required>
                     </div>
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" id="lblCatName">Hình ảnh tác giả</span>
-                        <input type="file" class="form-control" name="file" value="Upload">
+                        <input type="file" class="form-control" name="file" value="Upload" required>
                     </div>
                     <div class="form-group  float-end ">
                         <!-- <input type="submit" value="Thêm" class="btn btn-success"> -->

@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="../css/style_author.css">
 </head>
 <body>
     <header>
@@ -62,8 +63,9 @@
                             <tr>
                                 <td><?= htmlspecialchars($item['ma_tgia']) ?></td>
                                 <td><?= htmlspecialchars($item['ten_tgia']) ?></td>
-                                <td>
-                                    <img src="<?= $item['hinh_tgia'] ?>" width="10%" height="auto" alt="">
+                                <td class="box-image">
+                                    <a class="author-image-link" href="http://localhost/thucHanh1/CSE485_2023/btth01/<?= $item['hinh_tgia']; ?>"><i class="fa-solid fa-eye"></i></a>
+                                    <img src="..<?= $item['hinh_tgia']; ?>" class="active" width="40%" height="auto" alt="">
                                 </td>
                                 <td>
                                     <a href="edit_author.php?id=<?= $item['ma_tgia'] ?>"><i class="fa-solid fa-pen-to-square"></i></a>

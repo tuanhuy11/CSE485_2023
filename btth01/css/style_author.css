@@ -1,0 +1,14 @@
+.box-image {
+    position: relative;
+}
+
+.active {
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: 50px;
+}
+
+.author-image-link:hover + .active{
+    display: block;
+}
